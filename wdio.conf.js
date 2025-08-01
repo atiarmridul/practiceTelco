@@ -13,21 +13,18 @@ export const config = {
   capabilities: [
     {
       "appium:platformName": "Android",
-      //Personal Samsung device
-      "appium:deviceName": "R58R777L6JL",
-      "appium:platformVersion": "14.0",
-      //OPPO from office
-      // "appium:deviceName": "IFIVQOTS95GYMRW4",
-      // "appium:platformVersion": "12.0",
+      "appium:deviceName": "IFIVQOTS95GYMRW4", //R58R777L6JL
+      "appium:platformVersion": "12.0", //14.0
       "appium:automationName": "UiAutomator2",
-      // "appium:appPackage": "com.chaldal.poached",
-      // "appium:appActivity": "com.chaldal.poached.MainActivity",
-      "appium:app": path.join(process.cwd(), "./app/android/My_Airtel.apk"),
+      "appium:app": path.join(process.cwd(), "./app/android/My_Robi.apk"),
       "appium:autoGrantPermissions": true,
       "appium:enforceXPath1": true,
-      "appium:noReset": true,
-      "appium:disableSuppressAccessibilityServiceErrors": true, //due to facing problem in Android 11+
-      "appium:ignoreHiddenApiPolicyError": true, //due to facing problem in Android 11+
+      "appium:noReset": false,
+      "appium:fullReset": true,
+      "appium:disableSuppressAccessibilityServiceErrors": true,
+      "appium:ignoreHiddenApiPolicyError": true,
+      "appium:adbExecTimeout": 20000,
+      "appium:appWaitActivity": "*",
     },
   ],
 
