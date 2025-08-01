@@ -8,31 +8,26 @@ export const config = {
 
   exclude: [],
 
-
   maxInstances: 10,
 
   capabilities: [
     {
       "appium:platformName": "Android",
       //Personal Samsung device
-      // "appium:deviceName": "R58R777L6JL", 
-      // "appium:platformVersion": "14.0",
+      "appium:deviceName": "R58R777L6JL",
+      "appium:platformVersion": "14.0",
       //OPPO from office
-      "appium:deviceName": "IFIVQOTS95GYMRW4",
-      "appium:platformVersion": "12.0",
+      // "appium:deviceName": "IFIVQOTS95GYMRW4",
+      // "appium:platformVersion": "12.0",
       "appium:automationName": "UiAutomator2",
       // "appium:appPackage": "com.chaldal.poached",
       // "appium:appActivity": "com.chaldal.poached.MainActivity",
-      "appium:app": path.join(
-        process.cwd(),
-        "./app/android/My_Airtel.apk"
-      ),
+      "appium:app": path.join(process.cwd(), "./app/android/My_Airtel.apk"),
       "appium:autoGrantPermissions": true,
       "appium:enforceXPath1": true,
       "appium:noReset": true,
       "appium:disableSuppressAccessibilityServiceErrors": true, //due to facing problem in Android 11+
-      "appium:ignoreHiddenApiPolicyError": true //due to facing problem in Android 11+
- 
+      "appium:ignoreHiddenApiPolicyError": true, //due to facing problem in Android 11+
     },
   ],
 
@@ -49,8 +44,6 @@ export const config = {
   services: [["appium"]],
 
   framework: "mocha",
-
-
 
   // afterTest: async function (
   //   test,
@@ -69,9 +62,7 @@ export const config = {
   //   }
   // },
 
-  reporters: [
-    "spec",
-  ],
+  reporters: ["spec"],
 
   // Options to be passed to Mocha.
   // See the full list at http://mochajs.org/
@@ -79,5 +70,4 @@ export const config = {
     ui: "bdd",
     timeout: 60000,
   },
-
 };
