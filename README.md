@@ -53,7 +53,25 @@ npm run wdio
 
 ## Project Structure
 
-* `test/specs/`: Contains the test files (e.g., `e2e.spec.js`).
-* `test/pageobjects/`: Contains the page object models (e.g., `login.page.js`, `deeplink.page.js`).
-* `test/data/`: Contains test data files (e.g., `deeplinks.js`).
-* `wdio.conf.js`: The main configuration file for WebdriverIO.
+This project has the following structure:
+
+```
+/Users/atiarrahmanchowdhury/wdio-appium/
+├───.gitignore
+├───package-lock.json
+├───package.json
+├───README.md
+├───wdio.conf.js
+├───.git/...
+├───app/
+│   └───android/...
+├───node_modules/...
+└───test/
+    ├───data/
+    │   └───deeplinks.js
+    ├───pageobjects/
+    │   ├───deeplink.page.js
+    │   └───login.page.js
+    └───specs/
+        └───e2e.spec.js
+```
